@@ -4,6 +4,8 @@
 
 ![Main](/images/front.jpg "FrontofBoard.jpg")
 
+[View schematic](images/LiPo-Protection.pdf)
+
 ## What is it?
 
 A small over-discharge / over-charge LiPo protection circuit with **sensible limits** to prolong the life of your LiPo cells.
@@ -12,6 +14,7 @@ A small over-discharge / over-charge LiPo protection circuit with **sensible lim
 * OverDischarge Release Voltage `3.300V`
 * Overcharge Detection Voltage `4.280V` 
 * Overcharge Release Voltage `4.080V` 
+* Entire circuit - low power mode - measured current draw ~90uA 
 
 ### Why did I make it?
 
@@ -38,7 +41,7 @@ These boards are fully hand-assembled and reflowed but will require you to conne
 * Protected output positive connects to P+ on the board
 * Protected output negative connects to P- on the board
 
-What are the technical specifications? Examples: how much power does it require? How many ports are there?
+Note: Once the over-discharge protection kicks in, the board enters power-down mode (to avoid discharging the battery even more). Once this happens, and once the battery voltage is above you need to briefly connect P- and B- to return the AP9101C to normal operating mode.
 
 ### Common uses
 
